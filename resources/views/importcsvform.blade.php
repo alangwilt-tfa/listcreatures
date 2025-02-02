@@ -14,9 +14,13 @@
 
                         <div>
                             <x-input-label for="csv_import_input" :value="__('Upload csv')" />
-                            <x-text-input id="csv_import_input" name="current_password" type="file"
-                                class="mt-1 block w-full" />
-                            <x-input-error :messages="$errors->updatePassword->get('current_password')" class="mt-2" />
+                            <x-text-input id="csv_import_input" name="csv_import_input" type="file"
+                                class="mt-1 block w-full" required="required" />
+                            <!-- <x-input-error :messages="$errors->updatePassword->get('current_password')" class="mt-2" /> -->
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <x-primary-button>{{ __('Upload') }}</x-primary-button>
                         </div>
 
                     </form>

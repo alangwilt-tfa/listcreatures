@@ -22,7 +22,7 @@ Route::middleware('auth')->prefix('csvimport')->name('importcsv.')->group(functi
     Route::get('/form', function () {
         return view('importcsvform');
     })->name('form');
-    Route::post('/save', [ImportCSVController::class])->name('save');
+    Route::post('/save', ImportCSVController::class)->name('save');
 });
 
 require __DIR__.'/auth.php';
