@@ -18,6 +18,9 @@
                     <x-nav-link :href="route('importcsv.form')" :active="request()->routeIs('import')">
                         {{ __('Import csv') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('pokemon.index')" :active="request()->routeIs('pokemon')">
+                        {{ __('Pokemon') }}
+                    </x-nav-link>
                 </div>
             </div>
 

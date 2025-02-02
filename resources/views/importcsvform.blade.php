@@ -9,14 +9,14 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
-                    <form action="{{ route('importcsv.save')}}" method="post" class="mt-6 space-y-6">
+                    <form enctype="multipart/form-data" action="{{ route('importcsv.save')}}" method="post" class="mt-6 space-y-6">
                         @csrf
 
                         <div>
                             <x-input-label for="csv_import_input" :value="__('Upload csv')" />
-                            <x-text-input id="csv_import_input" name="csv_import_input" type="file"
+                            <x-text-input id="csv_import_input" name="csv_import_input" type="file" accept="text/csv"
                                 class="mt-1 block w-full" required="required" />
-                            <!-- <x-input-error :messages="$errors->updatePassword->get('current_password')" class="mt-2" /> -->
+                            <x-input-error :messages="$errors->import->get('csv_import_input')" class="mt-2" />
                         </div>
 
                         <div class="flex items-center gap-4">
