@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('pokemon', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->integer('dex_number');
-            $table->text('name');
+            $table->integer('number');
+            $table->text('pokemon');
             $table->text('type_1');
             $table->text('type_2');
             $table->integer('hp');
