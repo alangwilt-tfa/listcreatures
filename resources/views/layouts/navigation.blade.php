@@ -15,6 +15,9 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('importcsv.form')" :active="request()->routeIs('import')">
+                        {{ __('Import csv') }}
+                    </x-nav-link>
                 </div>
             </div>
 
