@@ -44,7 +44,10 @@ class PokemonController extends Controller
         return view('pokedex.all', [
             'pokemon' => $pokes,
             'types' => $merged_types,
-            'params' => $query
+            'params' => [
+                'search' => $search,
+                'type' => $qtype
+            ]
         ]);
     }
 
