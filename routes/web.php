@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ImportCSVController;
+use App\Http\Controllers\PokemonController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,9 +21,12 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware('auth')->prefix('csvimport')->name('importcsv.')->group(function () {
     Route::get('/form', function () {
+        Log::info('showing form');
         return view('importcsvform');
     })->name('form');
     Route::post('/save', ImportCSVController::class)->name('save');
 });
+
+Route::middleware('auth')->resource('pokemon', PokemonController::class);
 
 require __DIR__.'/auth.php';

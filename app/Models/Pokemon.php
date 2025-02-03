@@ -7,8 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pokemon extends Model
 {
-    /** @use HasFactory<\Database\Factories\PokemonFactory> */
-    use HasFactory;
-
     protected $guarded = ['id'];
 }
