@@ -35,6 +35,11 @@
                                 <th>Name</th>
                                 <th>Type 1</th>
                                 <th>Type 2</th>
+                                <th>HP</th>
+                                <th>Attack</th>
+                                <th>Defense</th>
+                                <th>Speed</th>
+                                <th>Special</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -46,6 +51,11 @@
                                     <td>{{ $p->pokemon }}</td>
                                     <td>{{ $p->type_1 }}</td>
                                     <td>{{ $p->type_2 }}</td>
+                                    <td>{{ $p->attack }}</td>
+                                    <td>{{ $p->defense }}</td>
+                                    <td>{{ $p->speed }}</td>
+                                    <td>{{ $p->special }}</td>
+                                    <td>{{ $p->hp }}</td>
                                 </tr>
                             @endforeach
 
