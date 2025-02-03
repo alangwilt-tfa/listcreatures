@@ -51,11 +51,11 @@
                                     <td>{{ $p->pokemon }}</td>
                                     <td>{{ $p->type_1 }}</td>
                                     <td>{{ $p->type_2 }}</td>
+                                    <td>{{ $p->hp }}</td>
                                     <td>{{ $p->attack }}</td>
                                     <td>{{ $p->defense }}</td>
                                     <td>{{ $p->speed }}</td>
                                     <td>{{ $p->special }}</td>
-                                    <td>{{ $p->hp }}</td>
                                 </tr>
                             @endforeach
 
